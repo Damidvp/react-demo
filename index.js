@@ -1,9 +1,13 @@
-import "./hello";
+import { sayHello } from "./hello";
 
+//Import et export
+sayHello();
+
+//Destructuration tableaux et objets
 const friends = ["ava", "spaghetti", "sula"];
 
 const friend = {
-  "His name": "Coco",
+  fn: "Coco",
   age: 56,
   address: {
     street: "9 desdes",
@@ -16,4 +20,11 @@ const friend = {
 
 const [firstFriend, , lastFriend] = friends;
 
+const {
+  fn: firstname,
+  age,
+  address: { city },
+} = friend;
+
 console.log(firstFriend, lastFriend);
+console.log(firstname, city, age);
