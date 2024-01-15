@@ -1,7 +1,13 @@
-import { sayHello } from "./hello";
-
 //Import et export
-sayHello();
+const ageLogin = 24;
+
+if (ageLogin >= 18) {
+  import("./hello.js").then((m) => {
+    m.default();
+  });
+} else {
+  console.log("Not cool");
+}
 
 //Destructuration tableaux et objets
 const friends = ["ava", "spaghetti", "sula"];
