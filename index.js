@@ -12,6 +12,11 @@ if (ageLogin >= 18) {
 //Destructuration tableaux et objets
 const friends = ["ava", "spaghetti", "sula"];
 
+const result = friends.find((value) => value != "spaghetti");
+console.log(result);
+//Rest operator : ...
+const [, ...bestFriends] = friends;
+
 const friend = {
   fn: "Coco",
   age: 56,
@@ -24,6 +29,12 @@ const friend = {
   },
 };
 
+const updated = {
+  ...friend,
+  age: 99,
+  email: "furendo@gmail.com",
+};
+
 const [firstFriend, , lastFriend] = friends;
 
 const {
@@ -34,3 +45,6 @@ const {
 
 console.log(firstFriend, lastFriend);
 console.log(firstname, city, age);
+
+console.log(bestFriends);
+console.log(updated);
